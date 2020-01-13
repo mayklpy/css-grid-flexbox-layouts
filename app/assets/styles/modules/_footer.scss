@@ -1,0 +1,276 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+
+  display: grid;
+  grid-template-areas:
+    "subscribe"
+    "logo"
+    "links"
+    "copyright";
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-areas:
+      "subscribe subscribe"
+      "links links"
+      "logo copyright";
+    grid-template-rows: 360px 1fr auto;
+    grid-template-columns: 176px 1fr;
+  }
+
+  @media only screen and (min-width: 1080px) {
+    grid-template-areas:
+      "subscribe subscribe subscribe subscribe"
+      ". links links ."
+      ". logo copyright .";
+    grid-template-rows: 360px 1fr auto;
+    grid-template-columns: 1fr 176px 904px 1fr;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.64);
+    transition: all 0.3s ease;
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+      text-decoration: underline;
+    }
+  }
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 72px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+}
+
+.subscribe {
+  grid-area: subscribe;
+
+  padding: 32px 16px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+
+  @media only screen and (min-width: 1080px) {
+    grid-template-columns: 1080px;
+  }
+
+  &__wrapper {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  &__meta {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    width: auto;
+    font-weight: 600;
+    margin: 0 auto 24px auto;
+    @media only screen and (min-width: 1080px) {
+      width: 70ch;
+    }
+  }
+  &__form {
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+        0 15px 12px rgba(0, 0, 0, 0.22);
+    }
+  }
+
+  &__email {
+    width: 100%;
+    background-color: #fff;
+    text-align: left;
+    line-height: 56px;
+    padding: 0 32px;
+    color: #4d4d4d;
+  }
+  &__button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 600;
+    padding: 0 32px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #000;
+  }
+
+  &__disclaimer {
+    width: auto;
+    @media only screen and (min-width: 1080px) {
+      width: 70ch;
+    }
+
+    margin: 0 auto;
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  background-color: #4d4d4d;
+  background-image: url("https://picsum.photos/1600/500");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.links {
+  grid-area: links;
+  padding: 32px 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media only screen and (min-width: 1080px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item {
+    font-size: 14px;
+    margin-bottom: 16px;
+
+    @media only screen and (min-width: 768px) {
+      &:nth-last-child(1) {
+        grid-column: 1/4;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+      }
+    }
+    @media only screen and (min-width: 1080px) {
+      &:nth-last-child(1) {
+        grid-column: auto;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  &__list {
+    font-size: 14px;
+    line-height: 2;
+
+    &--social-media {
+      font-size: 20px;
+      display: flex;
+      margin-bottom: 16px;
+      a {
+        margin-right: 16px;
+      }
+    }
+  }
+  .address {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    @media only screen and (min-width: 1080px) {
+      flex-direction: column;
+    }
+
+    &__title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    &__text {
+      margin-bottom: 16px;
+      margin-right: 0;
+
+      @media only screen and (min-width: 768px) {
+        margin-right: 64px;
+      }
+
+      @media only screen and (min-width: 1080px) {
+        margin-right: 0;
+      }
+    }
+    &__links {
+      display: flex;
+      flex-direction: column;
+      line-height: 2;
+    }
+  }
+}
+
+.logo {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+
+  &__link {
+    display: inline-flex;
+  }
+
+  padding: 32px 16px 0 16px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 16px;
+  }
+}
+
+.copyright {
+  grid-area: copyright;
+  display: flex;
+  align-items: center;
+
+  padding: 16px;
+
+  &__text {
+    color: rgba(255, 255, 255, 0.48);
+  }
+}

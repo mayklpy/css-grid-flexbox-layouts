@@ -1,12 +1,12 @@
 {
   "name": "css-grid-flexbox-layouts",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Designing layouts using CSS Grid and Flexbox",
   "main": "webpack.config.js",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack",
-    "serve": "http-server ./dist"
+    "serve": "http-server ./docs"
   },
   "repository": {
     "type": "git",
