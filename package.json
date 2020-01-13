@@ -1,0 +1,53 @@
+{
+  "name": "css-grid-flexbox-layouts",
+  "version": "1.0.0",
+  "description": "Designing layouts using CSS Grid and Flexbox",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack",
+    "serve": "http-server ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchlrtnz/css-grid-flexbox-layouts.git"
+  },
+  "keywords": [
+    "CSS Grid",
+    "Flexbox",
+    "Sass",
+    "PostCSS",
+    "Node.js",
+    "Webpack",
+    "Babel"
+  ],
+  "author": "mchlrtnz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mchlrtnz/css-grid-flexbox-layouts/issues"
+  },
+  "homepage": "https://github.com/mchlrtnz/css-grid-flexbox-layouts#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.1",
+    "cssnano": "^4.1.10",
+    "fs-extra": "^8.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.12.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.24.4",
+    "sass-loader": "^8.0.1",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "destyle.css": "^1.0.11"
+  }
+}
