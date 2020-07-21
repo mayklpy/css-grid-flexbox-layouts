@@ -2,4 +2,4 @@
 
 Designing layouts using CSS Grid and Flexbox
 
-GitHub Page: https://mchlrtnz.github.io/css-grid-flexbox-layouts/
+GitHub Page: https://mayklpy.github.io/css-grid-flexbox-layouts/
